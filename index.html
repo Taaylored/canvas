@@ -6,10 +6,9 @@
 </head>
 <body>
 <canvas id="draw" width="800" height="800" ></canvas>
-<style>
-    #draw{
-        background: white;
-    }</style>
+<!--
+
+-->
 <script>
 const canvas = document.querySelector('#draw');
 const ctx = canvas.getContext('2d');
@@ -18,7 +17,7 @@ canvas.height = window.innerHeight;
 ctx.strokeStyle = '#BADA55';
 ctx.lineJoin = 'round';
 ctx.lineCap = 'round';
-    ctx.shadowBlur=80;
+    ctx.shadowBlur=15;
 ctx.shadowColor="black";
 ctx.lineWidth = 100;
  ctx.globalCompositeOperation = 'color-dodge';
