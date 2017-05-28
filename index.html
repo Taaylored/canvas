@@ -5,6 +5,10 @@
   <title>HTML5 Canvas</title>
 </head>
 <body>
+    <div>
+        <h1>Click to Draw</h1>
+        <h1>Doubleclick to Reset</h1>
+    </div>
 <canvas id="draw" width="400" height="400" ></canvas>
 <!--
 
@@ -88,7 +92,27 @@ canvas.addEventListener('mouseout', () => isDrawing = false);
     margin:0;
       background: black;
   }
-</style>
+    div {
+        
+        background: gray;
+        width: 100px;
+        height: 100px;
+        margin: 10px;
+        position: absolute;
+        opacity: 0.4;
+
+    }
+    
+    h1{
+        color: white;
+        font-family: sans-serif;
+        font-weight: 200;
+        font-size: 12px;
+        padding: 10px 0px 0px 10px;
+        
+    }
+    </style>
+
 
 </body>
 </html>
