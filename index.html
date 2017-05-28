@@ -5,7 +5,7 @@
   <title>HTML5 Canvas</title>
 </head>
 <body>
-<canvas id="draw" width="800" height="800" ></canvas>
+<canvas id="draw" width="400" height="400" ></canvas>
 <!--
 
 -->
@@ -15,12 +15,12 @@ const ctx = canvas.getContext('2d');
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 ctx.strokeStyle = '#BADA55';
-ctx.lineJoin = 'round';
-ctx.lineCap = 'round';
+ctx.lineJoin = 'square';
+ctx.lineCap = 'square';
     ctx.shadowBlur=15;
 ctx.shadowColor="black";
 ctx.lineWidth = 100;
- ctx.globalCompositeOperation = 'color-dodge';
+ ctx.globalCompositeOperation = 'xor';
 let isDrawing = false;
 let lastX = 0;
 let lastY = 0;
@@ -59,7 +59,23 @@ canvas.addEventListener('mousedown', (e) => {
   isDrawing = true;
   [lastX, lastY] = [e.offsetX, e.offsetY];
 });
+    
+    
+// Store the current transformation matrix
+ctx.save();
 
+// Use the identity matrix while clearing the canvas
+ctx.setTransform(1, 0, 0, 1, 0, 0);
+ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+// Restore the transform
+ctx.restore();    
+    
+    
+canvas.addEventListener('dblclick', (e) => {
+    isDrawing = false;
+    ctx.clearRect(0,0,canvas.width,canvas.height);
+});
 
 canvas.addEventListener('mousemove', draw);
 canvas.addEventListener('mouseup', () => isDrawing = false);
@@ -70,6 +86,7 @@ canvas.addEventListener('mouseout', () => isDrawing = false);
 <style>
   html, body {
     margin:0;
+      background: black;
   }
 </style>
 
