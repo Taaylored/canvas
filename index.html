@@ -7,13 +7,20 @@
 <body>
     <div>
         <h1>Click and Drag to Draw</h1>
-        <h1>Double click to Reset Canvas</h1>
+        <h1>Double click to Clear Canvas</h1>
         
-        <h1>Change Shape</h1>
+        <h1>Change LineCap</h1>
       <select name="lineCap" id="lineCap">
         <option value="butt">butt</option>
         <option value="square">square</option>
         <option value="round">round</option>
+      </select>
+       
+       <h1>Change Composition</h1>
+      <select name="globalComp" id="globalComp">
+        <option value="source-over">source-over</option>
+        <option value="xor">xor</option>
+        
       </select>
         
     </div>
@@ -28,11 +35,11 @@ canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 ctx.strokeStyle = '#BADA55';
 ctx.lineJoin = 'square';
-ctx.lineCap = 'square';
+ctx.lineCap = '';
 ctx.shadowBlur=15;
 ctx.shadowColor="black";
 ctx.lineWidth = 100;
-ctx.globalCompositeOperation = 'xor';
+ctx.globalCompositeOperation = '';
 let isDrawing = false;
 let lastX = 0;
 let lastY = 0;
@@ -102,12 +109,25 @@ canvas.addEventListener('mouseout', () => isDrawing = false);
 
   eleCap.addEventListener('change',function(){
     ctx.lineCap = eleCap.options[eleCap.selectedIndex].value;
-    ctx.clearRect(0, 0, 600, 300);
+//    ctx.clearRect(0, 0, 600, 300);
 //    drawScreen();
   });
   
     console.log('ctx.lineCap');
 //
+    
+// Change Global Compostion
+    
+  var eleComp = document.getElementById('globalComp'),
+      index = eleComp.selectedIndex,
+      globalComp = eleCap.options[index].value;
+
+  eleComp.addEventListener('change',function(){
+    ctx.globalCompositeOperation = eleComp.options[eleComp.selectedIndex].value;
+//        ctx.clearRect(0, 0, 600, 300);
+//    drawScreen();
+  });
+    
     
 </script>
 
@@ -117,18 +137,16 @@ canvas.addEventListener('mouseout', () => isDrawing = false);
       background: black;
   }
     div {
-        
-        background: gray;
-        width: 100px;
-        height: 175px;
-        margin: 10px;
-        position: absolute;
-        opacity: 0.9;
+        background: white;
+        width: 100%;
+        height: 25px;
+        padding: 10px;
 
     }
     
     h1{
-        color: white;
+        display: inline;
+        color: black;
         font-family: sans-serif;
         font-weight: 200;
         font-size: 12px;
