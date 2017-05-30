@@ -6,8 +6,16 @@
 </head>
 <body>
     <div>
-        <h1>Click to Draw</h1>
-        <h1>Doubleclick to Reset</h1>
+        <h1>Click and Drag to Draw</h1>
+        <h1>Double click to Reset Canvas</h1>
+        
+        <h1>Change Shape</h1>
+      <select name="lineCap" id="lineCap">
+        <option value="butt">butt</option>
+        <option value="square">square</option>
+        <option value="round">round</option>
+      </select>
+        
     </div>
 <canvas id="draw" width="400" height="400" ></canvas>
 <!--
@@ -21,10 +29,10 @@ canvas.height = window.innerHeight;
 ctx.strokeStyle = '#BADA55';
 ctx.lineJoin = 'square';
 ctx.lineCap = 'square';
-    ctx.shadowBlur=15;
+ctx.shadowBlur=15;
 ctx.shadowColor="black";
 ctx.lineWidth = 100;
- ctx.globalCompositeOperation = 'xor';
+ctx.globalCompositeOperation = 'xor';
 let isDrawing = false;
 let lastX = 0;
 let lastY = 0;
@@ -80,11 +88,27 @@ canvas.addEventListener('dblclick', (e) => {
     isDrawing = false;
     ctx.clearRect(0,0,canvas.width,canvas.height);
 });
+    
 
 canvas.addEventListener('mousemove', draw);
 canvas.addEventListener('mouseup', () => isDrawing = false);
 canvas.addEventListener('mouseout', () => isDrawing = false);
 
+ 
+// lineCap change options
+  var eleCap = document.getElementById('lineCap'),
+      index = eleCap.selectedIndex,
+      lineCap = eleCap.options[index].value;
+
+  eleCap.addEventListener('change',function(){
+    ctx.lineCap = eleCap.options[eleCap.selectedIndex].value;
+    ctx.clearRect(0, 0, 600, 300);
+//    drawScreen();
+  });
+  
+    console.log('ctx.lineCap');
+//
+    
 </script>
 
 <style>
@@ -96,10 +120,10 @@ canvas.addEventListener('mouseout', () => isDrawing = false);
         
         background: gray;
         width: 100px;
-        height: 100px;
+        height: 175px;
         margin: 10px;
         position: absolute;
-        opacity: 0.4;
+        opacity: 0.9;
 
     }
     
