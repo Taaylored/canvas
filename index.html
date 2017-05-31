@@ -6,7 +6,7 @@
 </head>
 <body>
     <div>
-        <h1>Click and drag to draw. Doubleclick to clear. </h1>
+        <h1>Click and drag to draw</h1>
         
         <h2>Change LineCap</h2>
       <select name="lineCap" id="lineCap">
@@ -19,10 +19,19 @@
       <select name="globalComp" id="globalComp">
         <option value="source-over">source-over</option>
         <option value="xor">xor</option>
-        
-        <button id="bgcolor">Toggle Background</button>
+      </select>
+       
+       
+<!--
+        <h2>Change background</h2>
+      <select name="bgColor" id="bgColor">
+        <option value="black">black</option>
+        <option value="white">white</option>
       </select>
         
+        <button id="bgcolor">Toggle Background</button>
+        <h1>Doubleclick to clear Canvas</h1>
+-->
     </div>
 <canvas id="draw" width="400" height="400" ></canvas>
 <!--
@@ -128,13 +137,19 @@ canvas.addEventListener('mouseout', () => isDrawing = false);
 //    drawScreen();
   });
     
-    
+//  var bgColor =  document.getElementsByName('body'),
+//        index = bgColor.selectedIndex,
+//            body.backgroundColor = bgColor.option[index].value;
+//    
+//    bgColor.addEventListener('change',function(){
+//   background = bgColor.options[bgColor.selectedIndex].value;
+//     });
 </script>
 
 <style>
   html, body {
     margin:0;
-      background: black;
+      background-color: black;
   }
     div {
         background: white;
