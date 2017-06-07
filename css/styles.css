@@ -4,19 +4,19 @@
       background-color: black;
   }
 
-ui top fixed menu {
+ui borderless tiny menu {
     
-    color: orange;
+    background-color: orange;
 }
 
 h4 {
-        display: inline;
+/*        display: inline;*/
         color: #ff7979;
-        font-family: sans-serif;
-        font-weight: 200;
-        font-size: 12px;
-        padding: 10px 0px 0px 10px;
         
     }
     
+select option {
+    background-color: orange;
+    color: black;
+}
     
