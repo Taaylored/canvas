@@ -4,19 +4,3 @@
       background-color: black;
   }
 
-ui borderless tiny menu {
-    
-    background-color: orange;
-}
-
-h4 {
-/*        display: inline;*/
-        color: #ff7979;
-        
-    }
-    
-select option {
-    background-color: orange;
-    color: black;
-}
-    
