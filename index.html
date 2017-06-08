@@ -12,24 +12,26 @@
   
 </head>
 <body>
-<div class="ui fluid six borderless  menu">
+<div class="ui fluid six borderless menu">
 <div class="ui stackable four column grid">
 
 
 <div class="row">
 <div class="active blue item"> Click and drag to draw // Doublclick to clear</div>
 
-<div class="item">      
+     
 <div class="item"> Change LineCap</div>
+<div class="item"> 
 <select  name="lineCap" id="lineCap">
+<option value="round">round</option>
 <option value="butt">butt</option>
 <option value="square">square</option>
-<option value="round">round</option>
 </select>
  </div>
 
-<div class="item">
+
 <div class="item"> Change Composition </div>
+<div class="item">
 <select name="globalComp" id="globalComp">
 <option value="source-over">source-over</option>
 <option value="xor">xor</option>
@@ -38,22 +40,9 @@
  </div>
 </div>
 </div>
-
-     
-     
-<!--
-      
-      <select class="ui dropdown" name="globalComp" id="select">
-       <option value="">Change Composition</option>
-        <option value="source-over">source-over</option>
-        <option value="xor">xor</option>
-      </select>
-    
+ 
         
--->
-        
-        
-<main class="ui centered grid">
+<main class="ui grid">
 
 
 <canvas id="draw" width="400" height="400" ></canvas>
