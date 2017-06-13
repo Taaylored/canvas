@@ -39,6 +39,102 @@
 		"oF": 0,
 		"oS": 0
 		},
+	"\/favicons\/android-chrome-192x192.png": {
+		"ft": 32768,
+		"iS": 19623,
+		"oA": 0,
+		"oAP": "\/favicons\/android-chrome-192x192.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/favicons\/android-chrome-256x256.png": {
+		"ft": 32768,
+		"iS": 28278,
+		"oA": 0,
+		"oAP": "\/favicons\/android-chrome-256x256.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/favicons\/apple-touch-icon.png": {
+		"ft": 32768,
+		"iS": 18224,
+		"oA": 0,
+		"oAP": "\/favicons\/apple-touch-icon.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/favicons\/browserconfig.xml": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/favicons\/browserconfig.xml",
+		"oF": 0
+		},
+	"\/favicons\/favicon-16x16.png": {
+		"ft": 32768,
+		"iS": 1642,
+		"oA": 0,
+		"oAP": "\/favicons\/favicon-16x16.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/favicons\/favicon-32x32.png": {
+		"ft": 32768,
+		"iS": 2487,
+		"oA": 0,
+		"oAP": "\/favicons\/favicon-32x32.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/favicons\/favicon.ico": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/favicons\/favicon.ico",
+		"oF": 0
+		},
+	"\/favicons\/manifest.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "\/favicons\/manifest-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"\/favicons\/mstile-150x150.png": {
+		"ft": 32768,
+		"iS": 10477,
+		"oA": 0,
+		"oAP": "\/favicons\/mstile-150x150.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/favicons\/safari-pinned-tab.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/favicons\/safari-pinned-tab.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
 	"\/index-FINISHED.html": {
 		"ft": 8192,
 		"oA": 2,
@@ -68,6 +164,17 @@
 		"oF": 0,
 		"sC": 1,
 		"tS": 0
+		},
+	"\/unnamed.png": {
+		"ft": 32768,
+		"iS": 24549,
+		"oA": 0,
+		"oAP": "\/unnamed.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		}
 	},
 "hooks": [

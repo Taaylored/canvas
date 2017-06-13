@@ -104,16 +104,6 @@ canvas.addEventListener('mouseout', () => isDrawing = false);
   });
     
     
-    
-    
-//  var bgColor =  document.getElementsByName('body'),
-//        index = bgColor.selectedIndex,
-//            body.backgroundColor = bgColor.option[index].value;
-//    
-//    bgColor.addEventListener('change',function(){
-//   background = bgColor.options[bgColor.selectedIndex].value;
-//     });
-
 
 $('#select')
 .dropdown()
